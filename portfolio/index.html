@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="sty.css">
+    <script src="https://kit.fontawesome.com/63023a32dc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+      <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+           
+            
+        </nav>
+        
+        <div class="header-text">
+            <p>Hi...<br>I am Aditya Kumar Poddar</p>
+            <h1>Web <span id="animate">Developer</span></h1>
+        </div>
+        <div class="home-sci">
+            <a href="https://www.linkedin.com/in/aditya-kumar-poddar-717484236"><i class='bx bxl-linkedin' ></i></a>
+            <a href="mailto:poddaradikumar@gmail.com"><i class='bx bx-envelope'></i></a>
+            <a href="https://github.com/Aadi01-02"><i class='bx bxl-github'></i></a>
+            <a href="https://instagram.com/lost_boy_aadi?igshid=MzRlODBiNWFlZA=="><i class='bx bxl-instagram'></i></a>
+
+             </div>
+      </div>
+    </div>
+<!------------About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h3 class="sub-title">About Me</h3>
+                    <p>I am a pre- final year student who is currently pursuing BTech in Computer Science Engineering.
+                        I am an aspiring /web Developer. I am not an expert at this stage but I always look forward for opportunities to push myself.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                        <li><span>Programming Languages</span><br>C|C++|Python</li>
+                        <li><span>Web Development</span><br>HTML|CSS</li>
+                        <li><span>DSA</span></li>
+                        <li><span>Database</span><br>MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                        <li><span>Matriculation(2018)</span><br>Delhi Model Public School, Patna<br>Percentage-79%</li>
+                        <li><span>Intermediate(2020)</span><br>College of Commerce, Patna<br>Percentage-79.8%</li>
+                        <li><span>Graduation(Ongoing:2021-2025)</span><br>Techno India University, Kolkata<br>CGPA-8.31</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------projets-->
+    <div id="projects">
+        <div class="container">
+            <h2 class="sub-title">Projects</h2>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-n"></i>
+                    <h2>Netflix Clone</h2>
+                    <p> With HTML and CSS as the building blocks, I'm excited to present a platform that showcases our love for movies and web development.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class='bx bxs-calculator'></i>
+                    <h2>Calculator</h2>
+                    <p> With HTML and CSS as the building blocks, I'm excited to present a platform that showcases our love for movies and web development.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class='bx bxs-quote-left'></i> <i class='bx bxs-quote-right'></i>
+                    <h2>Quote Generator</h2>
+                    <p> With HTML and CSS as the building blocks, I'm excited to present a platform that showcases our love for movies and web development.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------contact-->
+    <div id="contact">
+    <div class="container">
+        <div class="contact-left">
+            <h2 clas="sub-title">Contact Me</h2>
+            <p><i class='bx bx-mail-send'></i>poddaradikumar@gmail.com</p>
+            <p><i class='bx bxs-phone'></i>8789128362</p>
+            <a href="resume.pdf" download class="btn btn2">Download my Resume</a>
+            
+        </div>
+        <div class="contact-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+    <div class="copyright">Copyright © 2023 Aditya</div>
+    </div>
+    <!--------------script-->
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyHIicrqelrPCipX-jLBK6qaUcvK0I53NRyU9M1IEjL5_efvCq-i2X3y9n38dC-oZxe/exec'
+    const form = document.forms['submit-to-google-sheet'];
+    cont msg = document.getElementById("msg");
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = "";
+            },5000);
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+  </script>
+    
+</body>
+</html>
