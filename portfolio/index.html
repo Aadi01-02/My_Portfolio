@@ -135,7 +135,7 @@
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyHIicrqelrPCipX-jLBK6qaUcvK0I53NRyU9M1IEjL5_efvCq-i2X3y9n38dC-oZxe/exec'
     const form = document.forms['submit-to-google-sheet'];
-    cont msg = document.getElementById("msg");
+    const msg = document.getElementById("msg");
   
     form.addEventListener('submit', e => {
       e.preventDefault();
